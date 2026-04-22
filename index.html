@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Digital Still Life</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage-shell">
+      <div class="stage-frame">
+        <canvas id="art-canvas" aria-label="Digital Still Life media art"></canvas>
+        <div class="title-block" aria-hidden="true">
+          <p>Digital Still Life</p>
+          <span>The Physical Impossibility of Data</span>
+        </div>
+        <button id="fullscreen-toggle" class="fullscreen-toggle" type="button">
+          Fullscreen
+        </button>
+      </div>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
