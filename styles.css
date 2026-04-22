@@ -102,32 +102,6 @@ body {
   opacity: 0.82;
 }
 
-.fullscreen-toggle {
-  position: absolute;
-  top: clamp(18px, 1.6vw, 28px);
-  right: clamp(18px, 1.6vw, 28px);
-  z-index: 2;
-  border: 1px solid rgba(227, 246, 249, 0.32);
-  background: rgba(5, 44, 49, 0.22);
-  color: rgba(245, 252, 252, 0.9);
-  padding: 10px 16px;
-  border-radius: 999px;
-  font: inherit;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  transition:
-    transform 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease;
-}
-
-.fullscreen-toggle:hover {
-  transform: translateY(-1px);
-  background: rgba(5, 44, 49, 0.36);
-  border-color: rgba(227, 246, 249, 0.52);
-}
-
 @media (max-width: 900px) {
   .stage-frame {
     width: 100vw;

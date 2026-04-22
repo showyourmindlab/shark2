@@ -3,7 +3,6 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const canvas = document.querySelector("#art-canvas");
 const stageFrame = document.querySelector(".stage-frame");
-const fullscreenToggle = document.querySelector("#fullscreen-toggle");
 
 const renderer = new THREE.WebGLRenderer({
   canvas,
@@ -418,12 +417,16 @@ loader.load(
   (err) => { console.error("[Shark] GLB load error:", err); },
 );
 
-fullscreenToggle.addEventListener("click", async () => {
+async function toggleFullscreen() {
   if (!document.fullscreenElement) {
     await stageFrame.requestFullscreen().catch(() => {});
   } else {
     await document.exitFullscreen().catch(() => {});
   }
+}
+
+stageFrame.addEventListener("dblclick", () => {
+  toggleFullscreen();
 });
 
 window.addEventListener("pointermove", (event) => {
